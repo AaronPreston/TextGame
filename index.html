@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title> TEXT GAME </title>
+
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+
+  </head>
+
+  <body>
+
+      <div id='current_quest'>
+        <h1> CURRENT QUEST: <span class='quest' id='quest'> NONE </span></h1>
+      </div>
+
+        <h1 id='hp_title'> HP: </h1><span id='health'> 100 </span>
+        <h1 id='xp_title'> XP: </h1><span id='xp'> 0 </span>
+        <h1 id='lvl_title'> LVL: </h1><span id='lvl'> 1 </span>
+
+      <canvas id='map' height='240' width='300'>
+        <p style='color: white'> Your browser does not support this feature. </p>
+      </canvas>
+
+        <h1 id='coordinates'> X: 240 | Y: 210  </h1>
+
+
+      <div id='text_output'>
+        <p id='output'>
+
+          DO YOU HAVE JAVASCRIPT ENABLED? IF NOT, HEAD INTO YOUR BROWSER SETTINGS AND ENABLE JAVASCRIPT.
+
+        </p>
+      </div>
+
+      <div id='button_box'>
+        <div id='option_1' class='option_button' onclick='optionOneClick()'>
+          <p id='option_1_text'>
+            OPTION 1
+          </p>
+        </div>
+
+        <div id='option_2' class='option_button' onclick='optionTwoClick()'>
+          <p id='option_2_text'>
+            OPTION 2
+          </p>
+        </div>
+
+        <div id='option_3' class='option_button' onclick='optionThreeClick()'>
+          <p id='option_3_text'>
+            OPTION 3
+          </p>
+        </div>
+
+        <div id='option_4' class='option_button' onclick='optionFourClick()'>
+          <p id='option_4_text'>
+            OPTION 4
+          </p>
+        </div>
+      </div>
+
+      <img id='nav_up' onclick='navUp()' src='assets/nav_up.png' />
+      <img id='nav_right' onclick='navRight()' src='assets/nav_right.png' />
+      <img id='nav_down' onclick='navDown()' src='assets/nav_down.png' />
+      <img id='nav_left' onclick='navLeft()' src='assets/nav_left.png' />
+
+    <script type='text/javascript' src='scripts/js/levelsystem.js'></script>
+    <script type='text/javascript' src='scripts/js/story.js'></script>
+    <script type='text/javascript' src='scripts/js/positioncheck.js'></script>
+    <script type='text/javascript' src='scripts/js/main.js'></script>
+  </body>
+</html>

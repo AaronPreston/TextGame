@@ -1,0 +1,212 @@
+* {
+  font-family: 'VT323';
+  color: #FFFFFF;
+}
+
+body {
+  background-color: black;
+}
+
+#map {
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 100px;
+  border: 1px solid #FFFFFF;
+}
+
+#current_quest h1, #current_quest span {
+  margin-top: -10px;
+  left: 0;
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 50px;
+}
+
+#current_quest span {
+  width: 300%;
+  margin-top: 0px;
+  top: 0;
+  margin-left: 320px;
+  color: #00cc44;
+}
+
+#hp_title {
+  position: absolute;
+  right: 0;
+  margin-right: 260px;
+  top: 0;
+  margin-top: -5px;
+  font-size: 40px;
+}
+
+#health {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -5px;
+  font-size: 40px;
+}
+
+#xp_title {
+  position: absolute;
+  right: 0;
+  margin-right: 260px;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+#xp {
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+#lvl_title {
+  position: absolute;
+  right: 228px;
+  margin-top: 53px;
+  margin-right: 18px;
+  font-size: 40px;
+}
+
+#lvl {
+  position: absolute;
+  right: -18px;
+  margin-top: 53px;
+  margin-right: 18px;
+  font-size: 40px;
+}
+
+#text_output {
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 1%;
+  right: 30%;
+  bottom: 30%;
+  word-wrap: break-word;
+ /*delete*/
+}
+
+#text_output p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.name {
+  color: #ff4d4d;
+}
+
+.quest {
+  color: #00cc44;
+}
+
+.item {
+  color: #1a1aff;
+}
+
+#button_box {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  height: 25%;
+  right: 30%;
+}
+
+.option_button {
+  font-size: 18px;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+#option_2 {
+  margin-left: 410px;
+  margin-top: -54px;
+}
+
+#option_4 {
+  margin-left: 410px;
+  margin-top: -54px;
+}
+
+
+#option_1:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+#option_2:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+#option_3:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+#option_4:hover {
+  cursor: pointer;
+  color: #cccccc;
+}
+
+
+
+
+#nav_up {
+  position: absolute;
+  right: 0;
+  margin-top: 400px;
+  margin-right: 130px;
+}
+
+#nav_right {
+  position: absolute;
+  right: 0;
+  margin-top: 445px;
+  margin-right: 80px;
+}
+
+#nav_down {
+  position: absolute;
+  right: 0;
+  margin-top: 518px;
+  margin-right: 130px;
+}
+
+#nav_left {
+  position: absolute;
+  right: 0;
+  margin-top: 445px;
+  margin-right: 205px;
+}
+
+#nav_up:hover {
+  cursor: pointer;
+}
+
+#nav_right:hover {
+  cursor: pointer;
+}
+
+#nav_down:hover {
+  cursor: pointer;
+}
+
+#nav_left:hover {
+  cursor: pointer;
+}
+
+#coordinates {
+  position: absolute;
+  color: white;
+  right: 0;
+  margin-right: 60px;
+  margin-top: 350px;
+}

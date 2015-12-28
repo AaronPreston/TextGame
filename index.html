@@ -1,73 +1,45 @@
 <!DOCTYPE HTML>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title> TEXT GAME </title>
+<html lang='en'>
 
-    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' type='text/css' href='css/main.css'>
+	<head>
+		<meta charset='utf-8'>
+		<title> Before you play </title>
+		<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 
-  </head>
+		<style type='text/css'>
+			* {
+				font-family: 'VT323';
+ 				color: #FFFFFF;
+ 				text-align: center;
+ 				font-size: 40px;
+			}
 
-  <body>
-
-      <div id='current_quest'>
-        <h1> CURRENT QUEST: <span class='quest' id='quest'> NONE </span></h1>
-      </div>
-
-        <h1 id='hp_title'> HP: </h1><span id='health'> 100 </span>
-        <h1 id='xp_title'> XP: </h1><span id='xp'> 0 </span>
-        <h1 id='lvl_title'> LVL: </h1><span id='lvl'> 1 </span>
-
-      <canvas id='map' height='240' width='300'>
-        <p style='color: white'> Your browser does not support this feature. </p>
-      </canvas>
-
-        <h1 id='coordinates'> X: 240 | Y: 210  </h1>
+			body {
+				background-color: black;
+			}
+		</style>
+	</head>
 
 
-      <div id='text_output'>
-        <p id='output'>
+	<body>
 
-          DO YOU HAVE JAVASCRIPT ENABLED? IF NOT, HEAD INTO YOUR BROWSER SETTINGS AND ENABLE JAVASCRIPT.
+		<h1> How does an open world text game work? </h1>
 
-        </p>
-      </div>
+		<p> You can use the arrows to navigate the map freely. Different text is triggered depending on where you are in the world. You may also use the WASD keys to navigate. </p>
 
-      <div id='button_box'>
-        <div id='option_1' class='option_button' onclick='optionOneClick()'>
-          <p id='option_1_text'>
-            OPTION 1
-          </p>
-        </div>
+		<h2> Dev Notes: </h2>
 
-        <div id='option_2' class='option_button' onclick='optionTwoClick()'>
-          <p id='option_2_text'>
-            OPTION 2
-          </p>
-        </div>
+		<p> This game was last updated 12/28/2015. <br> <strong>Upcoming features:</strong> <br> -- Responsive UI for lower sub HD devices. <br> -- A visible inventory. <br> -- More quests <br><br> If you have any questions or comments, please email me at <span style='color: blue'>aaronpreston115@gmail.com</span>. <br> Please be wary that this is a very early build and there is practically no content at this time. </p>
 
-        <div id='option_3' class='option_button' onclick='optionThreeClick()'>
-          <p id='option_3_text'>
-            OPTION 3
-          </p>
-        </div>
+		<h3><a style='color: red' href='game/game.html'>CLICK HERE TO PLAY</a></h3>
 
-        <div id='option_4' class='option_button' onclick='optionFourClick()'>
-          <p id='option_4_text'>
-            OPTION 4
-          </p>
-        </div>
-      </div>
 
-      <img id='nav_up' onclick='navUp()' src='assets/nav_up.png' />
-      <img id='nav_right' onclick='navRight()' src='assets/nav_right.png' />
-      <img id='nav_down' onclick='navDown()' src='assets/nav_down.png' />
-      <img id='nav_left' onclick='navLeft()' src='assets/nav_left.png' />
+		<script type='text/javascript'>
+			console.log('Created by: Aaron Preston');
+			console.log('https://github.com/AaronPreston');
 
-    <script type='text/javascript' src='scripts/js/levelsystem.js'></script>
-    <script type='text/javascript' src='scripts/js/story.js'></script>
-    <script type='text/javascript' src='scripts/js/positioncheck.js'></script>
-    <script type='text/javascript' src='scripts/js/main.js'></script>
-  </body>
+
+		</script>
+	</body>
+
 </html>

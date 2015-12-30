@@ -1,3 +1,5 @@
 The .quest class shows a quest in green.
 The .name class shows a name in red.
 The .item class shows an item in blue.
+
+main.js is the game engine/framework.

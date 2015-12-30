@@ -91,8 +91,8 @@ posCheck = function() {
 
 
   } else {
-    player.x = player.last_x;
-    player.y = player.last_y;
+    player.x = player.last.x;
+    player.y = player.last.y;
   }
 
   document.getElementById('coordinates').innerHTML = 'X: ' + player.x + ' | Y: ' + player.y;

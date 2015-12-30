@@ -29,7 +29,7 @@
       <div id='text_output'>
         <p id='output'>
 
-          DO YOU HAVE JAVASCRIPT ENABLED? IF NOT, HEAD INTO YOUR BROWSER SETTINGS AND ENABLE JAVASCRIPT.
+          <span style='font-size: 40px'>LOADING.</span> <br><br><br> IF THIS TAKES LONGER THAN A FEW SECONDS, TRY MAKING SURE THAT YOUR JAVASCRIPT SETTINGS ARE ENABLED!
 
         </p>
       </div>
@@ -60,14 +60,15 @@
         </div>
       </div>
 
-      <img id='nav_up' onclick='navUp()' src='assets/nav_up.png' />
-      <img id='nav_right' onclick='navRight()' src='assets/nav_right.png' />
-      <img id='nav_down' onclick='navDown()' src='assets/nav_down.png' />
-      <img id='nav_left' onclick='navLeft()' src='assets/nav_left.png' />
+      <img id='nav_up' src='assets/nav_up.png' />
+      <img id='nav_right' src='assets/nav_right.png' />
+      <img id='nav_down' src='assets/nav_down.png' />
+      <img id='nav_left' src='assets/nav_left.png' />
 
-    <script type='text/javascript' src='scripts/js/levelsystem.js'></script>
-    <script type='text/javascript' src='scripts/js/story.js'></script>
-    <script type='text/javascript' src='scripts/js/positioncheck.js'></script>
-    <script type='text/javascript' src='scripts/js/main.js'></script>
+
+
+    <script type='text/javascript' src='scripts/js/framework.js'></script> <!-- First -->
+    <script type='text/javascript' src='scripts/js/positioncheck.js'></script> <!-- Above last -->
+    <script type='text/javascript' src='scripts/js/main.js'></script> <!-- Last (Game engine) -->
   </body>
 </html>

@@ -1,3 +1,5 @@
+var empty = function() {};
+
 var player = {
   x: 240,
   y: 210,
@@ -45,6 +47,42 @@ var game = {
     b: '',
     c: '',
     d: ''
+  },
+
+  element: {
+    option: {
+      a: document.getElementById('option_1'),
+      b: document.getElementById('option_2'),
+      c: document.getElementById('option_3'),
+      d: document.getElementById('option_4')
+    }
+  },
+
+  town: {
+    loop: empty,
+    leave: function(pos) {
+      if(pos === 'left') {
+        player.x -= 3;
+      } else if(pos === 'up') {
+        player.y -= 3;
+      } else if(pos === 'right') {
+        player.x += 3;
+      } else if(pos === 'down') {
+        player.y += 3;
+      } else {
+        player.x -= 3;
+      }
+
+      player.can.move.up = true;
+      player.can.move.right = true;
+      player.can.move.left = true;
+      player.can.move.down = true;
+
+      game.output = 'YOU HAVE LEFT <span class="name">' +  player.current.town + '</span>.';
+      player.current.town = null;
+
+      game.town.loop = empty;
+    }
   }
 }
 
@@ -59,6 +97,8 @@ Quest = function() {
 }
 
 var game_update_loop = setInterval(function() {
+  game.town.loop();
+
   checkXP();
   document.getElementById('quest').innerHTML = player.current.quest;
   document.getElementById('health').innerHTML = player.hp;

@@ -1,10 +1,26 @@
 var town = {
   bay_village: function() {
+      player.current.town = 'BAY VILLAGE';
       game.output = 'YOU ARE IN <span class="name">BAY VILLAGE</span>. YOU MAY LOOK FOR QUESTS, TALK TO VILLAGERS, AND SHOP.';
       game.option.a = '';
       game.option.b = '';
       game.option.c = '';
       game.option.d = 'LEAVE';
+
+      player.can.move.up = false;
+      player.can.move.right = false;
+      player.can.move.down = false;
+      player.can.move.left = false;
+
+      game.town.loop = function() {
+        console.log('Test');
+      }
+
+      game.element.option.d.onclick = function() {
+        game.town.leave('left');
+        player.in.town.bay_village = false;
+        game.element.option.d.onclick = function() { };
+      }
   }
 }
 
@@ -17,12 +33,7 @@ start.quest = function() {
   player.current.quest = start.name;
 
   game.output = 'FIND <span class="name">BAY VILLAGE</span> ON THE MAP BY USING THE NAVIGATION ARROWS.';
-}
 
-start.loop = setInterval(function() {
-  if(player.x === start.x && player.y === start.y) {
-    player.xp += start.xp_rew;
-    player.found.town.bay_village = true;
-    clearInterval(start.loop);
-  }
-}, 16);
+  player.xp += start.xp_rew;
+  player.found.town.bay_village = true;
+}

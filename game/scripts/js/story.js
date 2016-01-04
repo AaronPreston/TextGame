@@ -34,6 +34,15 @@ start.quest = function() {
 
   game.output = 'FIND <span class="name">BAY VILLAGE</span> ON THE MAP BY USING THE NAVIGATION ARROWS.';
 
-  player.xp += start.xp_rew;
+  document.getElementById('box_1_img').src = 'assets/items/wooden_sword.png';
   player.found.town.bay_village = true;
+}
+
+game.quest.loop = function() {
+  if(player.in.town.bay_village) {
+    xp_color_change();
+    player.xp += start.xp_rew;
+    player.current.quest = 'NONE';
+    game.quest.loop = function() { };
+  }
 }

@@ -134,7 +134,7 @@ body {
   position: absolute;
   bottom: 1%;
   left: 1%;
-  height: 25%;
+  height: 40%;
   right: 30%;
 }
 
@@ -232,4 +232,67 @@ body {
   right: 0;
   margin-right: 60px;
   margin-top: 350px;
+}
+
+
+#storage {
+  margin-top: 10px;
+  width: 812px;
+  height: 70px;
+}
+
+#box_1 {
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 90px;
+}
+
+#box_2 {
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: -54px;
+  margin-left: 234px;
+}
+
+#box_3 {
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: -54px;
+  margin-left: 378px;
+}
+
+#box_4 {
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: -54px;
+  margin-left: 522px;
+}
+
+#box_5 {
+  border: 2px solid white;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin-top: -54px;
+  margin-left: 666px;
+}
+
+.box_img {
+  cursor: pointer;
+}
+
+#hover_object {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 30px;
 }

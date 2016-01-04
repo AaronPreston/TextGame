@@ -12,7 +12,6 @@
   <body>
       <div id='load_overlay'></div>
 
-
       <div id='current_quest'>
         <h1> CURRENT QUEST: <span class='quest' id='quest'> NONE </span></h1>
       </div>
@@ -60,13 +59,22 @@
             OPTION 4
           </p>
         </div>
+
+        <div id='storage'>
+          <div id='box_1'><img id='box_1_img' class='box_img'/></div>
+          <div id='box_2'><img id='box_2_img' class='box_img'/></div>
+          <div id='box_3'><img id='box_3_img' class='box_img'/></div>
+          <div id='box_4'><img id='box_4_img' class='box_img'/></div>
+          <div id='box_5'><img id='box_5_img' class='box_img'/></div>
+        </div>
       </div>
 
-      <img id='nav_up' src='assets/nav_up.png' />
-      <img id='nav_right' src='assets/nav_right.png' />
-      <img id='nav_down' src='assets/nav_down.png' />
-      <img id='nav_left' src='assets/nav_left.png' />
+      <img id='nav_up' src='assets/nav_up.png' draggable='false' />
+      <img id='nav_right' src='assets/nav_right.png' draggable='false' />
+      <img id='nav_down' src='assets/nav_down.png' draggable='false' />
+      <img id='nav_left' src='assets/nav_left.png' draggable='false' />
 
+      <div id='hover_object'><span id='object'></span></div>
 
 
     <script type='text/javascript' src='scripts/js/framework.js'></script> <!-- First -->

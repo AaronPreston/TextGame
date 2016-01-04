@@ -1,6 +1,23 @@
 var canvas = document.getElementById('map'),
     c = canvas.getContext('2d');
 
+canvas.onmousedown = function(e) {
+  mouse.x = e.offsetX;
+  mouse.y = e.offsetY;
+
+  if(mouse.x >= 220 && mouse.x <= 233 && mouse.y >= 172 && mouse.y <= 185 && (player.found.town.bay_village || player.current.quest === 'FIND BAY VILLAGE')) {
+    game.element.object.innerHTML = 'BAY VILLAGE';
+  } else {
+    game.element.object.innerHTML = '';
+  }
+}
+
+document.onmouseup = function() {
+  setTimeout(function() {
+    game.element.object.innerHTML = '';
+  }, 1500);
+}
+
 
 // Create map
 var map = new Image();
@@ -10,9 +27,8 @@ map.onload = function() {
 
 map.src = 'assets/map.png';
 
-
 // Engine
-var game_loop = setInterval(function() {
+var game_loop = setInterval(function(e) {
   // Draw map
   c.fillStyle = '#000099';
   c.fillRect(0, 0, 300, 240);
@@ -43,7 +59,6 @@ var game_loop = setInterval(function() {
     player.in.town.bay_village = true;
     town.bay_village();
   }
-
 
 }, 16);
 
@@ -101,3 +116,11 @@ setTimeout(function() {
 setTimeout(function() {
   document.getElementById('load_overlay').parentNode.removeChild(document.getElementById('load_overlay'));
 }, 1000);
+
+
+
+// Click object description
+
+document.getElementById('box_1').onmousedown = function() {
+  game.element.object.innerHTML = 'WOODEN SWORD';
+}

@@ -3,3 +3,17 @@ The .name class shows a name in red.
 The .item class shows an item in blue.
 
 main.js is the game engine/framework.
+
+canvas.onmouseclick = function(e) {
+  mouse.x = offsetX;
+  mouse.y = offsetY;
+}
+
+
+
+if(mouse.x >= 225 && mouse.x <= 228 && mouse.y >= 177 && mouse.y <= 180 && (player.found.town.bay_village || player.current.quest === 'FIND BAY VILLAGE')) {
+  document.getElementById('option').innerHTML = 'BAY VILLAGE';
+} else {
+  document.getElementById('option').innerHTML = 'NONE';
+}
+}

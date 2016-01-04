@@ -55,7 +55,9 @@ var game = {
       b: document.getElementById('option_2'),
       c: document.getElementById('option_3'),
       d: document.getElementById('option_4')
-    }
+    },
+
+    object: document.getElementById('object')
   },
 
   town: {
@@ -83,7 +85,16 @@ var game = {
 
       game.town.loop = empty;
     }
+  },
+
+  quest: {
+    loop: function() { }
   }
+}
+
+var mouse = {
+  x: null,
+  y: null
 }
 
 Quest = function() {
@@ -98,7 +109,8 @@ Quest = function() {
 
 var game_update_loop = setInterval(function() {
   game.town.loop();
-
+  game.quest.loop();
+  
   checkXP();
   document.getElementById('quest').innerHTML = player.current.quest;
   document.getElementById('health').innerHTML = player.hp;
@@ -111,4 +123,5 @@ var game_update_loop = setInterval(function() {
   document.getElementById('option_2_text').innerHTML = game.option.b;
   document.getElementById('option_3_text').innerHTML = game.option.c;
   document.getElementById('option_4_text').innerHTML = game.option.d;
+
 }, 32);

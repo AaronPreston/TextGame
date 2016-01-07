@@ -71,24 +71,28 @@ start.quest();
 document.getElementById('nav_up').onclick = function() {
   if(player.can.move.up) {
     player.y -= 3;
+    encounter();
   }
 }
 
 document.getElementById('nav_right').onclick = function() {
   if(player.can.move.right) {
     player.x += 3;
+    encounter();
   }
 }
 
 document.getElementById('nav_down').onclick = function() {
   if(player.can.move.down) {
     player.y += 3;
+    encounter();
   }
 }
 
 document.getElementById('nav_left').onclick = function() {
   if(player.can.move.left) {
     player.x -= 3;
+    encounter();
   }
 }
 

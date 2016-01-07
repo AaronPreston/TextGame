@@ -6,6 +6,11 @@ var player = {
   hp: 100,
   xp: 0,
   level: 1,
+  encounter: {
+    chance: 25
+  },
+
+  attack: 14,
 
   last: {
     x: 0,
@@ -17,7 +22,21 @@ var player = {
       up: true,
       right: true,
       down: true,
-      left: true
+      left: true,
+
+      all: function(bool) {
+        if(bool === true) {
+          player.can.move.up = true;
+          player.can.move.right = true;
+          player.can.move.down = true;
+          player.can.move.left = true;
+        } else if(bool === false) {
+          player.can.move.up = false;
+          player.can.move.right = false;
+          player.can.move.down = false;
+          player.can.move.left = false;
+        }
+      }
     }
   },
 
@@ -89,6 +108,10 @@ var game = {
 
   quest: {
     loop: function() { }
+  },
+
+  random: function(val) {
+    return Math.floor(Math.random() * val) + 1;
   }
 }
 
@@ -96,6 +119,7 @@ var mouse = {
   x: null,
   y: null
 }
+
 
 Quest = function() {
   this.name;
@@ -110,7 +134,7 @@ Quest = function() {
 var game_update_loop = setInterval(function() {
   game.town.loop();
   game.quest.loop();
-  
+
   checkXP();
   document.getElementById('quest').innerHTML = player.current.quest;
   document.getElementById('health').innerHTML = player.hp;
@@ -123,5 +147,7 @@ var game_update_loop = setInterval(function() {
   document.getElementById('option_2_text').innerHTML = game.option.b;
   document.getElementById('option_3_text').innerHTML = game.option.c;
   document.getElementById('option_4_text').innerHTML = game.option.d;
+
+  fight.loop();
 
 }, 32);

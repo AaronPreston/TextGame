@@ -104,6 +104,11 @@ var game = {
 
       game.town.loop = empty;
     }
+
+  },
+
+  old: {
+    output: null
   },
 
   quest: {

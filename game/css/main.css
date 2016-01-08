@@ -248,6 +248,7 @@ body {
   cursor: pointer;
   margin-top: 10px;
   margin-left: 90px;
+  background: white;
 }
 
 #box_2 {
@@ -257,6 +258,7 @@ body {
   cursor: pointer;
   margin-top: -54px;
   margin-left: 234px;
+  background: white;
 }
 
 #box_3 {
@@ -266,6 +268,7 @@ body {
   cursor: pointer;
   margin-top: -54px;
   margin-left: 378px;
+  background: white;
 }
 
 #box_4 {
@@ -275,6 +278,7 @@ body {
   cursor: pointer;
   margin-top: -54px;
   margin-left: 522px;
+  background: white;
 }
 
 #box_5 {
@@ -284,6 +288,7 @@ body {
   cursor: pointer;
   margin-top: -54px;
   margin-left: 666px;
+  background: white;
 }
 
 .box_img {

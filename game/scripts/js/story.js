@@ -24,11 +24,7 @@ var town = {
   }
 }
 
-var start = new Quest();
-start.name = 'FIND BAY VILLAGE';
-start.x = 225;
-start.y = 177;
-start.xp_rew = 50;
+var start = new Quest("FIND BAY VILLAGE", 225, 177, 50);
 start.quest = function() {
   player.current.quest = start.name;
 

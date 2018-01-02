@@ -136,6 +136,16 @@ Quest = function() {
   this.loop;
 }
 
+Quest = function(name, x, y, reward) {
+  this.name = name;
+  this.x = x;
+  this.y = y;
+  this.xp_rew = reward;
+  this.complete = false;
+  this.quest;
+  this.loop;
+}
+
 var game_update_loop = setInterval(function() {
   game.town.loop();
   game.quest.loop();
